@@ -1,0 +1,49 @@
+package layouts
+
+import c "core/pkg/components"
+
+
+var links = []c.LinkProps{
+	{Title: "Home", HxGet: "/", HxTarget: "#main", HxSwap: "innerHTML"},
+	{Title: "About", HxGet: "/", HxTarget: "#main", HxSwap: "innerHTML"},
+	{Title: "Contact", HxGet: "/", HxTarget: "#main", HxSwap: "innerHTML"},
+}
+
+templ HtmlDoc(app_title string, contents templ.Component) {
+	<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="UTF-8"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+			<title>{ app_title }</title>
+			<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+			<link rel="icon" type="image/png" href="/images/favicon.png">
+			<link rel="stylesheet" href="/css/styles.css"/>
+			<script src="/js/htmx.min.js"></script>
+		</head>
+		<body class="h-screen">
+			<div class="drawer h-full">
+				<input id="my-drawer-3" type="checkbox" class="drawer-toggle"/>
+				<div class="drawer-content flex flex-col h-full">
+					@c.Header(app_title, links)
+					@c.MainContent() {
+						@contents
+					}
+					@c.Footer()
+				</div>
+				<nav class="drawer-side">
+					<label for="my-drawer-3" aria-label="close sidebar" class="drawer-overlay"></label>
+					<ul class="menu bg-base-200 min-h-full w-80 p-4">
+						for _, link := range links {
+							<li>
+								@c.Link(link) {
+									{ link.Title }
+								}
+							</li>
+						}
+					</ul>
+				</nav>
+			</div>
+		</body>
+	</html>
+}

@@ -1,0 +1,20 @@
+{
+    "language": "es-419",
+    "messages": [
+        {
+            "id": "Welcome to",
+            "message": "Welcome to",
+            "translation": "Bienvenido a"
+        },
+        {
+            "id": "ReserVe.me",
+            "message": "ReserVe.me",
+            "translation": "ReserVe.me"
+        },
+        {
+            "id": "A simple reservation system",
+            "message": "A simple reservation system",
+            "translation": "Un sistema de reservas simple"
+        }
+    ]
+}

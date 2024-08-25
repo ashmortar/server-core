@@ -1,0 +1,32 @@
+package components
+
+
+type LinkProps struct {
+	ClassName string
+	Href      string
+	HxGet     string
+	HxTarget  string
+	HxSwap    string
+	Title     string
+}
+
+templ Link(props LinkProps) {
+	<a
+		if (props.ClassName != "") {
+			class={ props.ClassName }
+		} else {
+			class="link"
+		}
+		if (props.Href != "") {
+			href={ templ.URL(props.Href) }
+			target="_blank"
+			rel="noopener noreferrer"
+		} else {
+			hx-get={ props.HxGet }
+			hx-target={ props.HxTarget }
+			hx-swap={ props.HxSwap }
+		}
+	>
+		{ children... }
+	</a>
+}

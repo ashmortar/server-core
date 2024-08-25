@@ -1,0 +1,26 @@
+{
+    "language": "en",
+    "messages": [
+        {
+            "id": "Welcome to",
+            "message": "Welcome to",
+            "translation": "Welcome to",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "ReserVe.me",
+            "message": "ReserVe.me",
+            "translation": "ReserVe.me",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "A simple reservation system",
+            "message": "A simple reservation system",
+            "translation": "A simple reservation system",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        }
+    ]
+}

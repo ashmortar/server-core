@@ -1,0 +1,17 @@
+{
+  "name": "server-core",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./internal/assets/styles/input.css -o ./internal/assets/css/styles.css",
+    "watch": "tailwindcss -i ./internal/assets/styles/input.css -o ./internal/assets/css/styles.css --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@tailwindcss/typography": "0.5.14",
+    "daisyui": "4.12.10",
+    "tailwindcss": "3.4.9"
+  }
+}

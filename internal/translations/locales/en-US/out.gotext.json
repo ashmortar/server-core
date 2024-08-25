@@ -1,0 +1,20 @@
+{
+    "language": "en-US",
+    "messages": [
+        {
+            "id": "Welcome to",
+            "message": "Welcome to",
+            "translation": "Welcome to"
+        },
+        {
+            "id": "ReserVe.me",
+            "message": "ReserVe.me",
+            "translation": "ReserVe.me"
+        },
+        {
+            "id": "A simple reservation system",
+            "message": "A simple reservation system",
+            "translation": "A simple reservation system"
+        }
+    ]
+}
