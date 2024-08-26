@@ -12,8 +12,8 @@ import c "core/pkg/components"
 
 var links = []c.LinkProps{
 	{Title: "Home", HxGet: "/", HxTarget: "#main", HxSwap: "innerHTML"},
-	{Title: "About", HxGet: "/", HxTarget: "#main", HxSwap: "innerHTML"},
-	{Title: "Contact", HxGet: "/", HxTarget: "#main", HxSwap: "innerHTML"},
+	{Title: "About", HxGet: "/about", HxTarget: "#main", HxSwap: "innerHTML"},
+	{Title: "Contact", HxGet: "/contact", HxTarget: "#main", HxSwap: "innerHTML"},
 }
 
 func HtmlDoc(app_title string, contents templ.Component) templ.Component {

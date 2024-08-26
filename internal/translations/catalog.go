@@ -28,7 +28,6 @@ func (d *dictionary) Lookup(key string) (data string, ok bool) {
 func init() {
 	dict := map[string]catalog.Dictionary{
 		"de":     &dictionary{index: deIndex, data: deData},
-		"de_DE":  &dictionary{index: de_DEIndex, data: de_DEData},
 		"en":     &dictionary{index: enIndex, data: enData},
 		"en_US":  &dictionary{index: en_USIndex, data: en_USData},
 		"es":     &dictionary{index: esIndex, data: esData},
@@ -44,56 +43,56 @@ func init() {
 
 var messageKeyToIndex = map[string]int{
 	"A simple reservation system": 2,
+	"About ":                      3,
 	"ReserVe.me":                  1,
-	"Welcome to ":                 0,
+	"ServerCore is a hypermedia application written with go, templ, sqlite and htmx": 4,
+	"Welcome to ": 0,
 }
 
-var deIndex = []uint32{ // 4 elements
+var deIndex = []uint32{ // 6 elements
 	0x00000000, 0x00000014, 0x0000001f, 0x00000041,
-} // Size: 40 bytes
+	0x00000041, 0x00000041,
+} // Size: 48 bytes
 
 const deData string = "" + // Size: 65 bytes
 	"\x04\x00\x01 \x0f\x02Willkommen bei\x02ReserVe.me\x02Ein einfaches Reser" +
 	"vierungssystem"
 
-var de_DEIndex = []uint32{ // 4 elements
-	0x00000000, 0x00000014, 0x0000001f, 0x00000041,
-} // Size: 40 bytes
-
-const de_DEData string = "" + // Size: 65 bytes
-	"\x04\x00\x01 \x0f\x02Willkommen bei\x02ReserVe.me\x02Ein einfaches Reser" +
-	"vierungssystem"
-
-var enIndex = []uint32{ // 4 elements
+var enIndex = []uint32{ // 6 elements
 	0x00000000, 0x00000010, 0x0000001b, 0x00000037,
-} // Size: 40 bytes
+	0x00000042, 0x00000091,
+} // Size: 48 bytes
 
-const enData string = "" + // Size: 55 bytes
+const enData string = "" + // Size: 145 bytes
 	"\x04\x00\x01 \x0b\x02Welcome to\x02ReserVe.me\x02A simple reservation sy" +
-	"stem"
+	"stem\x04\x00\x01 \x06\x02About\x02ServerCore is a hypermedia application" +
+	" written with go, templ, sqlite and htmx"
 
-var en_USIndex = []uint32{ // 4 elements
+var en_USIndex = []uint32{ // 6 elements
 	0x00000000, 0x00000010, 0x0000001b, 0x00000037,
-} // Size: 40 bytes
+	0x00000037, 0x00000037,
+} // Size: 48 bytes
 
 const en_USData string = "" + // Size: 55 bytes
 	"\x04\x00\x01 \x0b\x02Welcome to\x02ReserVe.me\x02A simple reservation sy" +
 	"stem"
 
-var esIndex = []uint32{ // 4 elements
+var esIndex = []uint32{ // 6 elements
 	0x00000000, 0x00000012, 0x0000001d, 0x0000003b,
-} // Size: 40 bytes
+	0x0000003b, 0x0000003b,
+} // Size: 48 bytes
 
 const esData string = "" + // Size: 59 bytes
 	"\x04\x00\x01 \x0d\x02Bienvenido a\x02ReserVe.me\x02Un sistema de reserva" +
 	"s simple"
 
-var es_419Index = []uint32{ // 4 elements
+var es_419Index = []uint32{ // 6 elements
 	0x00000000, 0x00000012, 0x0000001d, 0x0000003b,
-} // Size: 40 bytes
+	0x0000003b, 0x0000003b,
+} // Size: 48 bytes
 
 const es_419Data string = "" + // Size: 59 bytes
 	"\x04\x00\x01 \x0d\x02Bienvenido a\x02ReserVe.me\x02Un sistema de reserva" +
 	"s simple"
 
-	// Total table size 598 bytes (0KiB); checksum: 6753253
+	// Total table size 623 bytes (0KiB); checksum: 9774F1C1

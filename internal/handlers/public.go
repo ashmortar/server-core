@@ -17,11 +17,15 @@ func RootHandler(c echo.Context) error {
 }
 
 func AboutHandler(c echo.Context) error {
-	return templ.Render(c, pages.About())
+	return templ.Render(
+		c, pages.About(c.Get(translation.ContextKey).(*message.Printer)),
+	)
 }
 
 func ContactHandler(c echo.Context) error {
-	return templ.Render(c, pages.Contact())
+	return templ.Render(
+		c, pages.Contact(c.Get(translation.ContextKey).(*message.Printer)),
+		)
 }
 
 func PrivacyHandler(c echo.Context) error {
