@@ -1,14 +1,14 @@
 module core
 
-go 1.21.8
+go 1.23
 
-toolchain go1.22.6
+toolchain go1.23.0
 
 require (
 	github.com/a-h/templ v0.2.771
 	github.com/fatih/color v1.17.0
 	github.com/go-playground/validator/v10 v10.22.0
-	github.com/gorilla/sessions v1.3.0
+	github.com/gorilla/sessions v1.4.0
 	github.com/labstack/echo-contrib v0.17.1
 	github.com/labstack/echo/v4 v4.12.0
 	github.com/labstack/gommon v0.4.2
