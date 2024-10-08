@@ -10,6 +10,7 @@ langauges and then copied back into their source locale directories as
 `messages.gotext.json` files.
 
 ## Go:Generate
+
 [internal/translations/translations.go](../internal/translations/translations.go)
 
 ```go

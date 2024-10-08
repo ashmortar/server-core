@@ -11,9 +11,9 @@ import templruntime "github.com/a-h/templ/runtime"
 import c "core/pkg/components"
 
 var links = []c.LinkProps{
-	{Title: "Home", HxGet: "/", HxTarget: "#main", HxSwap: "innerHTML"},
-	{Title: "About", HxGet: "/about", HxTarget: "#main", HxSwap: "innerHTML"},
-	{Title: "Contact", HxGet: "/contact", HxTarget: "#main", HxSwap: "innerHTML"},
+	{Title: "Home", HxGet: "/", HxTarget: "#main", HxSwap: "outerHTML transition:true"},
+	{Title: "About", HxGet: "/about", HxTarget: "#main", HxSwap: "outerHTML transition:true"},
+	{Title: "Contact", HxGet: "/contact", HxTarget: "#main", HxSwap: "outerHTML transition:true"},
 }
 
 func HtmlDoc(app_title string, contents templ.Component) templ.Component {
@@ -41,7 +41,7 @@ func HtmlDoc(app_title string, contents templ.Component) templ.Component {
 		var templ_7745c5c3_Var2 string
 		templ_7745c5c3_Var2, templ_7745c5c3_Err = templ.JoinStringErrs(app_title)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `pkg/layouts/html-doc.templ`, Line: 18, Col: 21}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `pkg/layouts/html-doc.templ`, Line: 17, Col: 21}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var2))
 		if templ_7745c5c3_Err != nil {
@@ -105,7 +105,7 @@ func HtmlDoc(app_title string, contents templ.Component) templ.Component {
 				var templ_7745c5c3_Var5 string
 				templ_7745c5c3_Var5, templ_7745c5c3_Err = templ.JoinStringErrs(link.Title)
 				if templ_7745c5c3_Err != nil {
-					return templ.Error{Err: templ_7745c5c3_Err, FileName: `pkg/layouts/html-doc.templ`, Line: 40, Col: 21}
+					return templ.Error{Err: templ_7745c5c3_Err, FileName: `pkg/layouts/html-doc.templ`, Line: 39, Col: 21}
 				}
 				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var5))
 				if templ_7745c5c3_Err != nil {

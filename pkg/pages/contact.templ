@@ -1,6 +1,7 @@
 package pages
 
 import "golang.org/x/text/message"
+import c "core/pkg/components"
 
 func contact(p *message.Printer) string {
 	return p.Sprintf("Contact ")
@@ -11,8 +12,10 @@ func c_d(p *message.Printer) string {
 }
 
 templ Contact(p *message.Printer) {
-	<h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
-		{ contact(p) } <span class="text-emerald-600">{ title(p) }</span>
-	</h1>
-	<p class="text-gray-500 dark:text-gray-400">{ c_d(p) }</p>
+	@c.MainContent() {
+		<h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+			{ contact(p) } <span class="text-emerald-600">{ title(p) }</span>
+		</h1>
+		<p class="text-gray-500 dark:text-gray-400">{ c_d(p) }</p>
+	}
 }

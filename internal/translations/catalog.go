@@ -44,55 +44,62 @@ func init() {
 var messageKeyToIndex = map[string]int{
 	"A simple reservation system": 2,
 	"About ":                      3,
-	"ReserVe.me":                  1,
-	"ServerCore is a hypermedia application written with go, templ, sqlite and htmx": 4,
+	"Contact ":                    5,
+	"Please feel free to reach out to us by any of the means listed below.": 6,
+	"ReserVe.Me is a place to find the perfect campsite on private property or the perfect place to list your private campsites.  We let you list publically or on an invite-only basis to members you invite.  You can define campsites via geofencing, upload pictures, pdfs and other assets associated with spots and create templates for easy re-use throughout your property": 4,
+	"ReserVe.me":  1,
 	"Welcome to ": 0,
 }
 
-var deIndex = []uint32{ // 6 elements
+var deIndex = []uint32{ // 8 elements
 	0x00000000, 0x00000014, 0x0000001f, 0x00000041,
-	0x00000041, 0x00000041,
-} // Size: 48 bytes
+	0x00000041, 0x00000041, 0x00000041, 0x00000041,
+} // Size: 56 bytes
 
 const deData string = "" + // Size: 65 bytes
 	"\x04\x00\x01 \x0f\x02Willkommen bei\x02ReserVe.me\x02Ein einfaches Reser" +
 	"vierungssystem"
 
-var enIndex = []uint32{ // 6 elements
+var enIndex = []uint32{ // 8 elements
 	0x00000000, 0x00000010, 0x0000001b, 0x00000037,
-	0x00000042, 0x00000091,
-} // Size: 48 bytes
+	0x00000042, 0x000001b1, 0x000001be, 0x00000204,
+} // Size: 56 bytes
 
-const enData string = "" + // Size: 145 bytes
+const enData string = "" + // Size: 516 bytes
 	"\x04\x00\x01 \x0b\x02Welcome to\x02ReserVe.me\x02A simple reservation sy" +
-	"stem\x04\x00\x01 \x06\x02About\x02ServerCore is a hypermedia application" +
-	" written with go, templ, sqlite and htmx"
+	"stem\x04\x00\x01 \x06\x02About\x02ReserVe.Me is a place to find the perf" +
+	"ect campsite on private property or the perfect place to list your priva" +
+	"te campsites.  We let you list publically or on an invite-only basis to " +
+	"members you invite.  You can define campsites via geofencing, upload pic" +
+	"tures, pdfs and other assets associated with spots and create templates " +
+	"for easy re-use throughout your property\x04\x00\x01 \x08\x02Contact\x02" +
+	"Please feel free to reach out to us by any of the means listed below."
 
-var en_USIndex = []uint32{ // 6 elements
+var en_USIndex = []uint32{ // 8 elements
 	0x00000000, 0x00000010, 0x0000001b, 0x00000037,
-	0x00000037, 0x00000037,
-} // Size: 48 bytes
+	0x00000037, 0x00000037, 0x00000037, 0x00000037,
+} // Size: 56 bytes
 
 const en_USData string = "" + // Size: 55 bytes
 	"\x04\x00\x01 \x0b\x02Welcome to\x02ReserVe.me\x02A simple reservation sy" +
 	"stem"
 
-var esIndex = []uint32{ // 6 elements
+var esIndex = []uint32{ // 8 elements
 	0x00000000, 0x00000012, 0x0000001d, 0x0000003b,
-	0x0000003b, 0x0000003b,
-} // Size: 48 bytes
+	0x0000003b, 0x0000003b, 0x0000003b, 0x0000003b,
+} // Size: 56 bytes
 
 const esData string = "" + // Size: 59 bytes
 	"\x04\x00\x01 \x0d\x02Bienvenido a\x02ReserVe.me\x02Un sistema de reserva" +
 	"s simple"
 
-var es_419Index = []uint32{ // 6 elements
+var es_419Index = []uint32{ // 8 elements
 	0x00000000, 0x00000012, 0x0000001d, 0x0000003b,
-	0x0000003b, 0x0000003b,
-} // Size: 48 bytes
+	0x0000003b, 0x0000003b, 0x0000003b, 0x0000003b,
+} // Size: 56 bytes
 
 const es_419Data string = "" + // Size: 59 bytes
 	"\x04\x00\x01 \x0d\x02Bienvenido a\x02ReserVe.me\x02Un sistema de reserva" +
 	"s simple"
 
-	// Total table size 623 bytes (0KiB); checksum: 9774F1C1
+	// Total table size 1034 bytes (1KiB); checksum: D67F6600

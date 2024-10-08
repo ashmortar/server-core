@@ -11,6 +11,11 @@ func IsHtmxRequest(h echo.Context) bool {
 func SetHxReplaceUrl(h echo.Context, url string) {
 	h.Response().Header().Set("HX-Replace-Url", url)
 }
+
+func SetHxPushUrl(h echo.Context, url string) {
+	h.Response().Header().Set("HX-Push-Url", url)
+}
+
 func HtmlContentTypeMiddleware(next echo.HandlerFunc) echo.HandlerFunc {
 	return func(c echo.Context) error {
 		c.Response().Header().Set("Content-Type", "text/html")
