@@ -2,7 +2,7 @@ module core
 
 go 1.21.8
 
-toolchain go1.22.6
+toolchain go1.24.4
 
 require (
 	github.com/a-h/templ v0.2.771
