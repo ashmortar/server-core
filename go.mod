@@ -5,7 +5,7 @@ go 1.21.8
 toolchain go1.22.6
 
 require (
-	github.com/a-h/templ v0.2.771
+	github.com/a-h/templ v0.3.898
 	github.com/fatih/color v1.17.0
 	github.com/go-playground/validator/v10 v10.22.0
 	github.com/gorilla/sessions v1.3.0
